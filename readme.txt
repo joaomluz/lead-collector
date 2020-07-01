@@ -7,7 +7,7 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Simple lead for plugin example. 
+Simple lead collector wordpress plugin example.
 
 == Description ==
 
@@ -20,3 +20,6 @@ This plugin creates a shortcode to render a lead form. The contacts will be save
 * You can also change the labels of the fields like: ex:[lead_form name="new_name_label"] (name, phone, email, budget, message)
 * To change the maxlength of any field: ex: [lead_form name_max="30"]  (name, phone, email, budget, message)
 * To change the column or row size of message field: ex: [lead_form message_rows="5" message_cols="5"] 
+
+== Comming soon ==
+* Sortables columns on Customer edit.php page

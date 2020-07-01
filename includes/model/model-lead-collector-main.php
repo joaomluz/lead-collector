@@ -200,17 +200,34 @@ class lead_collector {
 		), $atts, 'lead_form');
 
 		// 3rd party api to get date and time
+		$date_time = $this->request_current_datetime_worldtimeapi();
+
+		ob_start();
+		// Using shortcode view file
+		include dirname(plugin_dir_path( __FILE__ )) . '/view/view-lead-collector-shortcode.php';
+	
+		return ob_get_clean();
+	}
+
+	/**
+	 * Return datetime from worldtimeapi
+	 *
+	 * @access  public
+	 * @return  Datetime
+	 * @since   1.0.0
+	 */
+
+	function request_current_datetime_worldtimeapi(){
+
 		$date_time = '';
+
 		$request_time = wp_remote_get( 'http://worldtimeapi.org/api/timezone/America/Sao_Paulo' );
 		if( !is_wp_error( $request_time ) ) {
 			$body_time = json_decode(wp_remote_retrieve_body( $request_time ));
 			$date_time = $body_time->datetime;
 		}
 
-		ob_start();
-		include dirname(plugin_dir_path( __FILE__ )) . '/view/view-lead-collector-shortcode.php';
-	
-		return ob_get_clean();
+		return $date_time;
 	}
 
 	/**
