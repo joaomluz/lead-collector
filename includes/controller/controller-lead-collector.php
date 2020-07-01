@@ -26,7 +26,7 @@ add_shortcode( 'lead_form', array(lead_collector(), 'lead_form_shortcode') );
 add_action( 'wp_ajax_lead_form_custom_action', array(lead_collector(),'lead_form_custom_action') );
 add_action( 'wp_ajax_nopriv_lead_form_custom_action', array(lead_collector(),'lead_form_custom_action') );
 
-
+// Handle columns customization of post type customer
 add_filter( 'manage_customer_posts_columns', array(lead_collector(),'set_custom_customer_edit_post_columns' ) );
 add_action( 'manage_customer_posts_custom_column' , array(lead_collector(),'custom_customer_admin_column'), 10, 2 );
     

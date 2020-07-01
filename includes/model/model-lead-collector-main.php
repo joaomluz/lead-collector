@@ -195,9 +195,9 @@ class lead_collector {
 		   'budget_max' => '10',
 		   'message_max' => '500',
 		   'message_rows' => '10',
-		   'message_cols' => '10',
+		   'message_cols' => '0',
 
-		), $atts );
+		), $atts, 'lead_form');
 
 		// 3rd party api to get date and time
 		$date_time = '';
@@ -222,6 +222,7 @@ class lead_collector {
 	 */
 
 	function set_custom_customer_edit_post_columns($columns) {
+		
 		unset( $columns['author'] );
 		unset( $columns['date'] );
 		unset( $columns['comments'] );

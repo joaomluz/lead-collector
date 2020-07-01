@@ -1,47 +1,22 @@
 === lead collector ===
 Contributors: joaomluz
-Donate link: http://www.example.com/donate
 Tags: wordpress, plugin, template
-Requires at least: 3.9
-Tested up to: 4.0
+Requires at least: 5.4.2
+Tested up to: 5.4.2
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This is where you craft a short, punchy description of your plugin
+Simple lead for plugin example. 
 
 == Description ==
 
-This is where you can give a much longer description of your plugin that you can use to explain just how it awesome it really is.
+This plugin creates a shortcode to render a lead form. The contacts will be saved in a post type Customer.
 
-== Installation ==
+== How to use? ==
 
-Installing "lead collector" can be done either by searching for "lead collector" via the "Plugins > Add New" screen in your WordPress dashboard, or by using the following steps:
-
-1. Download the plugin via WordPress.org
-1. Upload the ZIP file through the 'Plugins > Add New > Upload' screen in your WordPress dashboard
-1. Activate the plugin through the 'Plugins' menu in WordPress
-
-== Screenshots ==
-
-1. Description of first screenshot named screenshot-1
-2. Description of second screenshot named screenshot-2
-3. Description of third screenshot named screenshot-3
-
-== Frequently Asked Questions ==
-
-= What is the plugin template for? =
-
-This plugin template is designed to help you get started with any new WordPress plugin.
-
-== Changelog ==
-
-= 1.0 =
-* 2012-12-13
-* Initial release
-
-== Upgrade Notice ==
-
-= 1.0 =
-* 2012-12-13
-* Initial release
+* Unzip this plugin in your /plugin folder and enable via wp-admin.
+* Use the short code [lead_form] in your posts or pages to render the contact form.
+* You can also change the labels of the fields like: ex:[lead_form name="new_name_label"] (name, phone, email, budget, message)
+* To change the maxlength of any field: ex: [lead_form name_max="30"]  (name, phone, email, budget, message)
+* To change the column or row size of message field: ex: [lead_form message_rows="5" message_cols="5"] 

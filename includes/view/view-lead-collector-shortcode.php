@@ -1,5 +1,6 @@
-<?php ?>
-
+<?php 
+//Shortcode lead_form html
+?>
 
 <form class='wordpress-ajax-form-lead-collector' method="post" action="<?php echo admin_url('admin-ajax.php'); ?>">
   <div class="form-group">
@@ -20,19 +21,18 @@
   </div>
   <div class="form-group">
     <label for="sc_message"><?php echo $a['message']; ?></label>
-    <textarea class="form-control" id="sc_message" name="sc_message" rows="<?php echo $a['message_rows']; ?>" cols="<?php echo $a['message_cols'];?>" maxlength="<?php echo $a['message_max'];?>">
-    </textarea>
+    <textarea class="form" id="sc_message" name="sc_message" rows="<?php echo $a['message_rows']; ?>" cols="<?php echo $a['message_cols'];?>" maxlength="<?php echo $a['message_max'];?>"></textarea>
   </div>
   <?php wp_nonce_field( 'lead_form_custom_action', 'lead_form_nonce' ); ?>
   <input type="hidden" name="datetime" value="<?php echo $date_time; ?>">
   <input type="hidden" name="action" value="lead_form_custom_action">
   <div class="form-group">
     <div class="spinner-border" role="status" id="loading-lead-collector" style="display:none;">
-    <span class="sr-only">Loading...</span>
+    <span class="sr-only"></span>
    </div>
-    <button type="submit" class="btn btn-primary" id="submit-lead-collector">Submit</button>
+    <button type="submit" class="btn btn-primary btn-lg" id="submit-lead-collector"><?php _e( 'Submit form', 'lead_collector' ); ?></button>
   </div>
 </form>
 <div class="alert alert-success" role="alert" id="success-lead-collector" style="display:none;">
-    Submitted Successfully! 
+<?php _e( 'Submitted Successfully! ', 'lead_collector' ); ?>
 </div>
